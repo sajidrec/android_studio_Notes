@@ -1,6 +1,6 @@
 * Gson operations
 
-Convert Kotlin class into JSON format with Gson
+(*) Convert Kotlin class into JSON format with Gson
 
 data class User(
     val firstName: String, 
@@ -12,7 +12,7 @@ val myUser = User("Nathan", "Sebhastian")
 val jsonString = Gson().toJson(myUser)
 println(jsonString) // {"firstName":"Nathan","lastName":"Sebhastian"}
 
-Convert JSON into Kotlin class format
+(*) Convert JSON into Kotlin class format
 
 val userJson = """
 { 
@@ -24,3 +24,43 @@ val myUser = Gson().fromJson(userJson, User::class.java)
 
 println(myUser.firstName) // Arya
 println(myUser.lastName) // Stark
+
+(*) listof class to json array
+
+class User(val name: String, val age: Int)
+
+val officers = mutableListOf<User>()
+    officers.add(User("sajid", 23))
+    officers.add(User("Hossain", 23))
+    officers.add(User("Random officer", 69))
+
+    val officerJsonList = Gson().toJson(officers)
+
+    println(officerJsonList) // will print jsonArray
+
+(*) Json Array to list of customObject
+
+class User(val name: String, val age: Int)
+
+val typeToken = object : TypeToken<MutableList<User>>() {}.type
+val officersList = Gson().fromJson<MutableList<User>>(officerJsonList, typeToken) // its now list of User class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
