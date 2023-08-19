@@ -1,0 +1,26 @@
+* Gson operations
+
+Convert Kotlin class into JSON format with Gson
+
+data class User(
+    val firstName: String, 
+    val lastName: String
+)
+
+val myUser = User("Nathan", "Sebhastian")
+
+val jsonString = Gson().toJson(myUser)
+println(jsonString) // {"firstName":"Nathan","lastName":"Sebhastian"}
+
+Convert JSON into Kotlin class format
+
+val userJson = """
+{ 
+    "firstName": "Arya", 
+    "lastName": "Stark"
+}"""
+
+val myUser = Gson().fromJson(userJson, User::class.java)
+
+println(myUser.firstName) // Arya
+println(myUser.lastName) // Stark
