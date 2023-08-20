@@ -53,7 +53,8 @@ official doc -> https://google.github.io/volley/simple.html
 we can convert the string request to custom class using GSON
 
 
-
+*** Load image from url 
+Glide official documentation -> https://github.com/bumptech/glide
 
 
 
