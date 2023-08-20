@@ -46,7 +46,11 @@ val typeToken = object : TypeToken<MutableList<User>>() {}.type
 val officersList = Gson().fromJson<MutableList<User>>(officerJsonList, typeToken) // its now list of User class
 
 
+*** Volley
 
+official doc -> https://google.github.io/volley/simple.html
+
+we can convert the string request to custom class using GSON
 
 
 
