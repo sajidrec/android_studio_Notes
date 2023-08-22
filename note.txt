@@ -65,7 +65,10 @@ Timer().schedule(timerTask {
     finish()
 }, 3000)
 
+*** pass value from one to another activity
 
+intent.putExtra("url", url)
+intent.getStringExtra("url").toString()
 
 
 
