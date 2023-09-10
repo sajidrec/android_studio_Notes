@@ -1,0 +1,1 @@
+* Text to speech flutter package -> https://pub.dev/packages/text_to_speech
